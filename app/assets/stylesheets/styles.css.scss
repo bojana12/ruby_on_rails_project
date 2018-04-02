@@ -58,6 +58,12 @@ p {
   a:hover {
     color:  #DEB887;
   }
+  &.comment {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
 }
 
 th {
@@ -80,4 +86,24 @@ h6 {
   padding-top: 10px;
 }
 
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  font-size: 16px;
+  text-align: center;
+}
+
+.alert-error {
+  color: #a94442;
+  font-size: 16px;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  text-align: center;
+}
+
+div.alert {
+  margin: 2px;
+  padding: 15px;
+}
 

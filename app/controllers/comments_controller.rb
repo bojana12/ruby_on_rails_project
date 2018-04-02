@@ -5,9 +5,13 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.article_id = params[:article_id]
 
-    @comment.save
+    if @comment.save
+      flash[:success] = "You have successfully post a comment!"
+    else
+      flash[:error] = "Enter your name and comment before click on submit button!"
+    end
 
-    redirect_to article_path(@comment.article)
+     redirect_to article_path(@comment.article)
   end
 
   def comment_params
